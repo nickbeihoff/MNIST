@@ -9,7 +9,7 @@ location = []
 for i in range(0, 10):
     search = i
     df.loc[df.isin([search]).any(axis=1)].index.tolist().append(location)
-    print(location)
+print(location)
 '''
 df['Location'] = location
 df.reset_index(inplace=True)
