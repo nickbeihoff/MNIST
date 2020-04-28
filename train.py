@@ -7,4 +7,4 @@ from sklearn.datasets import load_digits
 from sklearn.cluster import KMeans
 from sklearn import metrics
 
-digits = pandas
+digits = pandas.read_csv("train.csv", sep=",")
