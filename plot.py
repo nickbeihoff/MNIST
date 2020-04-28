@@ -1,12 +1,19 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
-train = pd.read_csv("train.csv", sep=',')
-df = train['label'].value_counts()
-df['freq'] = df/len(train)
-df = df['freq']
+df = pd.read_csv("train.csv", sep=',')
+df = df['label']
 df = df.to_frame()
+location = []
+for i in range(0, 10):
+    search = i
+    df.loc[df.isin([search]).any(axis=1)].index.tolist().append(location)
+    print(location)
+'''
+df['Location'] = location
 df.reset_index(inplace=True)
-df.columns = ['Number', 'Percent']
-df.plot(kind='scatter', x='Number', y='Percent')
+df.columns = ['Number', 'Location']
+df.plot(kind='scatter', x='Number', y='Location')
 plt.show()
+'''
