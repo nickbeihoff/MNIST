@@ -7,7 +7,7 @@ df = df.to_frame()
 location = []
 for i in range(0, 10):
     search = i
-    df.loc[df.isin([search]).any(axis=1)].index.to_list().append(location)
+    location.append(df.loc[df.isin([search]).any(axis=1)].index.to_list())
 print(location)
 '''
 df['Location'] = location
