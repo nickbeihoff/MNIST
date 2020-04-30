@@ -11,6 +11,7 @@ def sigmoid(x):
 
 
 x = input("X: ")
+x = int(x)
 print("Sigmoid:")
 print(sigmoid(x))
 print("Softmax:")
