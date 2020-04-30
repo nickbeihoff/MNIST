@@ -4,11 +4,11 @@ import random
 
 train_df = pd.read_csv("train.csv")
 
-X_train = train_df.iloc[:, 1:].values
+x_train = train_df.iloc[:, 1:].values
 y_train = train_df.iloc[:, 0].values
 
 i = random.randint(0, 45)
-some_digit = X_train[i]
+some_digit = x_train[i]
 
 some_digit_image = some_digit.reshape(28, 28)
 print(f"Label: {y_train[i]}")
